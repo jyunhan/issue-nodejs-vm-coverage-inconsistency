@@ -1,0 +1,25 @@
+{
+  "name": "v8coverageIssue",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "",
+  "author": "J.H. Liou",
+  "scripts": {
+    "allowNodeVmScriptInTest": "node ./printrick/allowNodeVmScriptInTest.js",
+    "displayV8FunctionCovRanges": "node ./printrick/displayV8FunctionCovRanges.js",
+    "precase1": "npm run allowNodeVmScriptInTest && npm run displayV8FunctionCovRanges",
+    "precase2": "npm run allowNodeVmScriptInTest && npm run displayV8FunctionCovRanges",
+    "precase3": "npm run allowNodeVmScriptInTest && npm run displayV8FunctionCovRanges",
+    "precase4": "npm run allowNodeVmScriptInTest && npm run displayV8FunctionCovRanges",
+    "case1": "jest ./test/*.js --runInBand --collectCoverage --coverageProvider=v8 --verbose  --testSequencer=./test/tools/ascSequencer.js",
+    "case2": "jest ./test/*.js --runInBand --collectCoverage --coverageProvider=v8 --verbose  --testSequencer=./test/tools/descSequencer.js",
+    "case3": "jest ./test/eventA.test.js --runInBand --collectCoverage --coverageProvider=v8 --verbose",
+    "case4": "jest ./test/eventB.test.js --runInBand --collectCoverage --coverageProvider=v8 --verbose"
+  },
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {
+    "path": "0.12.7"
+  }
+}
